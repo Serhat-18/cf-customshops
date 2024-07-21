@@ -18,8 +18,3 @@ shared_scripts {
 	'@PolyZone/BoxZone.lua',
 	'@PolyZone/ComboZone.lua'
 }
-
-dependencies {
-    'qb-menu',
-    'qb-target'
-}
