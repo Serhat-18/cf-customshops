@@ -100,7 +100,7 @@ if Config.OpenEventType == "marker" then
                     sleep = 0
                     DrawMarker(21, v.coords.x, v.coords.y, v.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.3, 0, 136, 255, 100, false, true, 2, true, nil, nil, false)
                     if dist < 1.5 then
-                        QBCore.Functions.DrawText3D(v.coords.x, v.coords.y, v.coords.z, Config.LocaleConfig.Locales.MarkerText)
+                        QBCore.Functions.DrawText3D(v.coords.x, v.coords.y, v.coords.z, LocaleConfig.Locales.MarkerText)
                         if IsControlJustPressed(0, Config.MarkerKey) then
                             TriggerEvent('cf-customshops:OpenShop', {market = v.market})
                         end
@@ -129,6 +129,6 @@ RegisterNetEvent('cf-customshops:OpenShop', function(data)
     if hasAccess(PlayerData.job.name, marketData.JobName) then
         TriggerServerEvent("inventory:server:OpenInventory", "shop", marketData.Shops.shopcf, marketData.ShopLabel)
     else
-        QBCore.Functions.Notify(Config.LocaleConfig.Locales.DontThis, "error")
+        QBCore.Functions.Notify(LocaleConfig.Locales.DontThis, "error")
     end
 end)
